@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/Clarity_backend"
+]
+resolver = "2"
