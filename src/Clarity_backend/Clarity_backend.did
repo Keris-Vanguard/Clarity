@@ -1,3 +1,15 @@
+type AirQualityData = record {
+    pm25: float64;
+    pm10: float64;
+};
+
+type VerificationResult = record {
+    status: text;
+    message: text;
+};
+
 service : {
-    "greet": (text) -> (text) query;
+    "verify_air_quality": (AirQualityData) -> (VerificationResult);
+    "get_version": () -> (text) query;
+    "get_thresholds": () -> (text) query;
 }
